@@ -1,2 +1,2 @@
 # Calculator
-Simple calculator in python player
+## Simple calculator in python player
