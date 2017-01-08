@@ -29,7 +29,7 @@ def inverse(a):
 
 def power(a,b=1):
     return pow(a,b)
-    
+
 def pi():
     return math.pi
 
