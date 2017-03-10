@@ -1,4 +1,5 @@
-
+import math
+import re
 
 def check_brackets(string line):
     #checks if there is the same number of brackets in the string, basic version
@@ -11,7 +12,7 @@ def check_brackets(string line):
 def check_operators(string line):
     operators = ['+','-','/','^','*']
     for op in operators:
-        #gets the indeces of operators in the string
+        # gets the indeces of operators in the string
         ind.append(index_of_operators.append([i for i, thing in enumerate(line) if thing == op]))
 
     for ind in indeces:
@@ -19,3 +20,15 @@ def check_operators(string line):
         if not any([((line[x-1] in operators) and (line[x+1] in operators)) for x in ind]):
             return False
     return True
+
+def get_inermost_bracket(strng line):
+    opnidx = line.lastindex('(')
+    closeidx = line[opnidx:].firstindex(')')
+    return opnidx, closeidx
+
+def decompose(string line):
+    operators = ['+','-','/','^','*']
+    if check_brackets(line) and check_operators(line):
+        opn, cls = get_inermost_bracket(line)
+        evaluate_substring = line[opn,cls]
+        if :
