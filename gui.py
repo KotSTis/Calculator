@@ -1,9 +1,16 @@
 from Tkinter import *
-top = Tk()
-top.wm_title("Calculator")
-L1 = Label(top, text="enter expression")
-L1.pack( side = LEFT)
-E1 = Entry(top, bd =5)
-E1.pack(side = RIGHT)
+import proccessline
 
-top.mainloop()
+master = Tk()
+
+e = Entry(master)
+e.pack()
+e.focus_set()
+
+def callback():
+    print main(e.get())
+
+b = Button(master, text="get", width=10, command=callback)
+b.pack()
+
+master.mainloop()

@@ -20,6 +20,7 @@ def check_operators(string line):
         if not any([((line[x-1] in operators) and (line[x+1] in operators)) for x in ind]):
             return False
     return True
+<<<<<<< Updated upstream
 
 def get_inermost_bracket(strng line):
     opnidx = line.lastindex('(')
@@ -32,3 +33,7 @@ def decompose(string line):
         opn, cls = get_inermost_bracket(line)
         evaluate_substring = line[opn,cls]
         if :
+=======
+    
+def main(string line):
+>>>>>>> Stashed changes
